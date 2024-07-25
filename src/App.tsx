@@ -25,7 +25,10 @@ function TodoList() {
   }
 
   const deleteItem = (indexOfItemToDelete: number) => {
-    setListItems(listItems.filter((item, index) => index !== indexOfItemToDelete));
+    setListItems(listItems.filter((item, index) => {
+      index !== indexOfItemToDelete;
+      console.log(item);
+    }))
   }
 
   return <div style={{ transform: rotateOrNot }}>
