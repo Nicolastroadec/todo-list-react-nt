@@ -21,7 +21,7 @@ function TodoList() {
   return <div>
     <h2>Ajouter un élément</h2>
     <input style={{ marginRight: '20px' }} type="text" value={inputValue} onChange={handleInputValue} />
-    <button onClick={handleClick}>Ajouter l'élément à la liste</button>
+    <button onClick={handleClick}>Ajouter l'élément à la liste ❤️</button>
     <ul >
       {listItems.map((item, index) => (
         <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }} key={index}>
