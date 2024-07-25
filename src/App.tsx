@@ -2,6 +2,8 @@
 import './App.css'
 import { ChangeEvent, useState } from 'react'
 
+import Compteur from './Compteur'
+
 function TodoList() {
   const [listItems, setListItems] = useState<string[]>([]);
   const [inputValue, setInputValue] = useState<string>('');
@@ -30,6 +32,7 @@ function TodoList() {
       ))}
     </ul>
 
+    <Compteur />
   </div>;
 }
 
