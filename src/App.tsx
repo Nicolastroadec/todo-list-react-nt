@@ -7,6 +7,10 @@ import Compteur from './Compteur'
 function TodoList() {
   const [listItems, setListItems] = useState<string[]>([]);
   const [inputValue, setInputValue] = useState<string>('');
+
+
+  const [rotateOrNot, setRotateOrNot] = useState('rotate(0)');
+
   const handleInputValue = (event: ChangeEvent<HTMLInputElement>) => {
     setInputValue(event.target.value);
   }
@@ -16,11 +20,15 @@ function TodoList() {
     setInputValue('');
   }
 
+  const handleReturnPage = () => {
+    setRotateOrNot('rotate(180deg');
+  }
+
   const deleteItem = (indexOfItemToDelete: number) => {
     setListItems(listItems.filter((item, index) => index !== indexOfItemToDelete));
   }
 
-  return <div>
+  return <div style={{ transform: rotateOrNot }}>
     <h2>Ajouter un élément</h2>
     <input style={{ marginRight: '20px' }} type="text" value={inputValue} onChange={handleInputValue} />
     <button onClick={handleClick}>Ajouter l'élément à la liste ❤️</button>
@@ -33,6 +41,9 @@ function TodoList() {
     </ul>
 
     <Compteur />
+
+    <button onClick={handleReturnPage}>Retourne la page</button>
+
   </div>;
 }
 

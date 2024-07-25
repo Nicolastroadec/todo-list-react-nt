@@ -7,7 +7,6 @@ function Compteur() {
         <button onClick={() => { setCount(count + 1) }}>Augmente le compteur ! ^^</button>
         <div>Compteur à : {count}</div>
         <button onClick={() => { setCount(count - 1) }}>Diminue le compteur :(</button>
-
     </div>
 }
 
