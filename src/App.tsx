@@ -19,7 +19,7 @@ function TodoList() {
   }
 
   return <div>
-    <h2>Ajouter un élément - Test</h2>
+    <h2>Ajouter un élément</h2>
     <input style={{ marginRight: '20px' }} type="text" value={inputValue} onChange={handleInputValue} />
     <button onClick={handleClick}>Ajouter l'élément à la liste ❤️</button>
     <ul >
