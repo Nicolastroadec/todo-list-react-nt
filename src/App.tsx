@@ -24,10 +24,9 @@ function TodoList() {
     setRotateOrNot('rotate(180deg');
   }
 
-  const deleteItem = (indexOfItemToDelete: number) => {
-    setListItems(listItems.filter((item, index) => {
-      index !== indexOfItemToDelete;
-      console.log(item);
+  const deleteItem = (indexOfItemToDelete: string) => {
+    setListItems(listItems.filter((item) => {
+      item !== indexOfItemToDelete
     }))
   }
 
