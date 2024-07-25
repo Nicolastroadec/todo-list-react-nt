@@ -14,8 +14,8 @@ function TodoList() {
     setInputValue('');
   }
 
-  const deleteItem = (itemToDelete: string) => {
-    setListItems(listItems.filter(item => item !== itemToDelete));
+  const deleteItem = (indexOfItemToDelete: number) => {
+    setListItems(listItems.filter((item, index) => index !== indexOfItemToDelete));
   }
 
   return <div>
@@ -26,7 +26,7 @@ function TodoList() {
       {listItems.map((item, index) => (
         <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }} key={index}>
           <li style={{ marginRight: '20px' }}>{item}</li>
-          <button onClick={() => deleteItem(item)}>X</button></div>
+          <button onClick={() => deleteItem(index)}>X</button></div>
       ))}
     </ul>
 
